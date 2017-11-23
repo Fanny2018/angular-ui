@@ -1,0 +1,96 @@
+<div class="main-content">
+  <h4 class="page-title">Nav options</h4>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          水平导航菜单
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-pills nav-menu">
+            <li><a href="javascript:;">统计面板</a></li>
+            <li><a href="javascript:;">监控企业</a></li>
+            <li><a href="javascript:;">预警信息</a></li>
+            <li>
+              <ui-drop-down [open]="isShowOpen" (trigger)="isShowOpen = !isShowOpen" (escape)="isShowOpen = false">
+                <ui-drop-down-fixed>
+                  <span class="icon-user02"></span>
+                  <input type="text" readonly class="form-control" value="用户信息">
+                  <div class="ui-drop-arrow">
+                    <span class="caret"></span>
+                  </div>
+                </ui-drop-down-fixed>
+                <ui-drop-down-menu>
+                  <div class="list">
+                    <a href="javascript:;" class="list-item">下拉列表1</a>
+                    <a href="javascript:;" class="list-item">下拉列表2</a>
+                    <a href="javascript:;" class="list-item">下拉列表3</a>
+                  </div>
+                </ui-drop-down-menu>
+              </ui-drop-down>
+            </li>
+          </ul>
+          <br>
+          <ul class="nav nav-pills nav-menu menu-black">
+            <li><a href="javascript:;">统计面板</a></li>
+            <li><a href="javascript:;">监控企业</a></li>
+            <li><a href="javascript:;">
+              预警信息<span class="badge">1</span>
+            </a>
+            </li>
+            <li><a href="javascript:;">
+              站内信<span class="badge-dot"></span>
+            </a>
+            </li>
+          </ul>
+          <br>
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+          </ol>
+          <ol class="breadcrumb arrow">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+          </ol>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          垂直导航
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-pills nav-stacked nav-tree">
+            <li [ngClass]="{open: openState[0]}">
+              <a href="javascript:;" (click)="changeOpenState(0)">
+                <i class="icon icon-type"></i>设计规范
+                <span class="icon-arrow1-right pull-right"></span></a>
+              <ul class="nav list-unstyled">
+                <li><a routerLink="./font" routerLinkActive="active">字体颜色</a></li>
+                <li><a routerLink="./icons" routerLinkActive="active">字体图标</a></li>
+                <li><a routerLink="./catch-up" routerLinkActive="active">全局文本样式</a></li>
+              </ul>
+            </li>
+            <li [ngClass]="{open: openState[1]}">
+              <a href="javascript:;" (click)="changeOpenState(1)">
+                <i class="icon icon-type"></i>表格和布局
+                <span class="icon-arrow1-right pull-right"></span></a>
+              <ul class="nav list-unstyled">
+                <li><a routerLink="./grid" routerLinkActive="active">栅格</a></li>
+                <li><a routerLink="./table" routerLinkActive="active">表格</a></li>
+              </ul>
+            </li>
+            <li [ngClass]="{open: openState[2]}">
+              <a href="javascript:;" (click)="changeOpenState(2)">
+                <i class="icon icon-type"></i>基本元素</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

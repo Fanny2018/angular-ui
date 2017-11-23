@@ -1,0 +1,19 @@
+@import "../../../assets/scss/varibles.scss";
+
+p.icon-set {
+    text-align: center;
+    min-height: 90px;
+    i, span {
+        display: block;
+    }
+    i {
+        font-size: 18px;
+        height: 60px;
+        line-height: 60px;
+    }
+    &:hover i {
+        font-size: 36px;
+        color: $color-primary;
+        transition: all 0.2s ease;
+    }
+}

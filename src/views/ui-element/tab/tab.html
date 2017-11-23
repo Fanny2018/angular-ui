@@ -1,0 +1,215 @@
+<div class="main-content">
+  <h4 class="page-title">Tab options</h4>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          .nav-tabs
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-tabs">
+            <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+            <li [ngClass]="{'active':type===3}"><a href="javascript:;" (click)="changeType(3)">法人股东</a></li>
+          </ul>
+          <br>
+          <ul class="nav nav-tabs">
+            <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+            <li>
+              <ui-drop-down [open]="isOpen" (trigger)="isOpen = !isOpen" (escape)="isOpen = false">
+                <ui-drop-down-fixed>
+                  <input type="text" readonly class="form-control" value="点击下拉">
+                  <div class="ui-drop-arrow">
+                    <span class="caret"></span>
+                  </div>
+                </ui-drop-down-fixed>
+                <ui-drop-down-menu>
+                  <div class="list">
+                    <a href="javascript:;" class="list-item">下拉列表1</a>
+                    <a href="javascript:;" class="list-item">下拉列表2</a>
+                    <a href="javascript:;" class="list-item">下拉列表3</a>
+                  </div>
+                </ui-drop-down-menu>
+              </ui-drop-down>
+            </li>
+          </ul>
+          <br>
+          <ul class="nav nav-tabs primary">
+            <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+            <li [ngClass]="{'active':type===3}"><a href="javascript:;" (click)="changeType(3)">法人股东</a></li>
+          </ul>
+          <div class="tab-content p-md">
+            <div *ngIf="type === 1">
+              <p>1. 高度默认自适应，也可以随意固宽。</p>
+              <p>2. Tab进行了响应式处理，所以无需担心数量多少。</p>
+            </div>
+            <div *ngIf="type === 2">
+              2
+            </div>
+            <div *ngIf="type === 3">
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          .nav-pills
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-pills">
+            <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+            <li [ngClass]="{'active':type===3}"><a href="javascript:;" (click)="changeType(3)">法人股东</a></li>
+          </ul>
+          <br>
+          <ul class="nav nav-pills">
+            <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+            <li>
+              <ui-drop-down [open]="isShowOpen" (trigger)="isShowOpen = !isShowOpen" (escape)="isShowOpen = false">
+                <ui-drop-down-fixed>
+                  <input type="text" readonly class="form-control" value="点击下拉">
+                  <div class="ui-drop-arrow">
+                    <span class="caret"></span>
+                  </div>
+                </ui-drop-down-fixed>
+                <ui-drop-down-menu>
+                  <div class="list">
+                    <a href="javascript:;" class="list-item">下拉列表1</a>
+                    <a href="javascript:;" class="list-item">下拉列表2</a>
+                    <a href="javascript:;" class="list-item">下拉列表3</a>
+                  </div>
+                </ui-drop-down-menu>
+              </ui-drop-down>
+            </li>
+          </ul>
+          <br>
+          <ul class="nav nav-pills primary">
+            <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+            <li [ngClass]="{'active':type===3}"><a href="javascript:;" (click)="changeType(3)">法人股东</a></li>
+          </ul>
+          <br>
+          <div class="tab-content p-md">
+            <div *ngIf="type === 1">
+              <p>1. 高度默认自适应，也可以随意固宽。</p>
+              <p>2. Tab进行了响应式处理，所以无需担心数量多少。</p>
+            </div>
+            <div *ngIf="type === 2">
+              2
+            </div>
+            <div *ngIf="type === 3">
+              3
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          .nav-pills nav-stacked primary
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-pills nav-stacked primary">
+            <li class="active"><a href="javascript:;">企业信息检索</a></li>
+            <li><a href="javascript:;">风险信息</a></li>
+            <li><a href="javascript:;">法人股东</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          .nav-tabs nav-justified
+        </div>
+        <div class="panel-body">
+          <ul class="nav nav-tabs nav-justified">
+            <li class="active"><a href="javascript:;">企业信息检索</a></li>
+            <li><a href="javascript:;">风险信息</a></li>
+            <li><a href="javascript:;">法人股东</a></li>
+          </ul>
+          <br>
+          <br>
+          <ul class="nav nav-pills primary nav-justified">
+            <li><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+            <li class="active"><a href="javascript:;">风险信息</a></li>
+            <li><a href="javascript:;">法人股东</a></li>
+          </ul>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          .tab-card > .nav nav-tabs
+        </div>
+        <div class="panel-body">
+          <div class="tab-card">
+            <ul class="nav nav-tabs">
+              <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+              <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+              <li [ngClass]="{'active':type===3}"><a href="javascript:;" (click)="changeType(3)">法人股东</a></li>
+            </ul>
+            <div class="tab-content p-md">
+              <div *ngIf="type === 1">
+                <p>1. 高度默认自适应，也可以随意固宽。</p>
+                <p>2. Tab进行了响应式处理，所以无需担心数量多少。</p>
+              </div>
+              <div *ngIf="type === 2">
+                2
+              </div>
+              <div *ngIf="type === 3">
+                3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          .tab-card > .nav nav-tabs nav-more
+        </div>
+        <div class="panel-body">
+          <div class="tab-card">
+            <ul class="nav nav-tabs nav-more" [ngClass]="{open: !openClose}">
+              <li [ngClass]="{'active':type===1}"><a href="javascript:;" (click)="changeType(1)">企业信息检索</a></li>
+              <li [ngClass]="{'active':type===2}"><a href="javascript:;" (click)="changeType(2)">风险信息</a></li>
+              <li [ngClass]="{'active':type===3}"><a href="javascript:;" (click)="changeType(3)">法人股东</a></li>
+              <li [ngClass]="{'active':type===4}"><a href="javascript:;" (click)="changeType(4)">法人股东</a></li>
+              <li [ngClass]="{'active':type===5}"><a href="javascript:;" (click)="changeType(5)">法人股东</a></li>
+              <li [ngClass]="{'active':type===6}"><a href="javascript:;" (click)="changeType(6)">法人股东</a></li>
+              <li [ngClass]="{'active':type===7}"><a href="javascript:;" (click)="changeType(7)">法人股东</a></li>
+              <span class="tab-arrow" (click)="open()">
+                <i class="icon-arrow-bottom"></i>
+              </span>
+            </ul>
+            <div class="tab-content p-md">
+              <div *ngIf="type === 1">
+                <p>1. 宽度足够，就不会出现右上图标；宽度不够，就会开启展开功能。</p>
+              </div>
+              <div *ngIf="type === 2">
+                <p>2. 如果你的宽度是自适应的，Tab会自动判断是否需要展开，并适用于所有风格。</p>
+              </div>
+              <div *ngIf="type === 3">
+                3
+              </div>
+              <div *ngIf="type === 4">
+                4
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+@import '../assets/scss/varibles';
+
+// 头部
+.header {
+    .brand {
+        float: left;
+        a {
+            padding: 20px 30px;
+            width: 180px;
+            color: #566374;
+            font-size: 22px;
+            display: inline-block;
+        }
+    }
+    .icon-arrow2-left {
+        font-size: 22px;
+        padding: 26px 10px;
+        display: inline-block;
+    }
+    .search-form {
+        width: 300px;
+        padding: 20px;
+    }
+    .nav-menu {
+        margin-top: 20px;
+        &.nav-pills > li {
+            margin-left: 10px;
+            margin-right: 10px;
+            &.active > a:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.main {
+    margin-top: $header-height;
+}
+
+.sidebar {
+    width: $sidebar-width;
+    transition: all 0.4s;
+    height: 100%;
+    background-color: $menu-bg-color;
+    position: fixed;
+    left: 0;
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.pcSidebar {
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.iphoneSidebar {
+    width: 80px;
+    display: none;
+    .nav > li > a {
+        padding: 18px 15px;
+    }
+    .nav > li .nav > li > a {
+        padding: 10px 15px;
+    }
+    @media screen and (max-width: 992px) {
+        display: block;
+    }
+}
+
+.content {
+    width: calc(100% - 224px);
+    @media screen and (max-width: 992px) {
+        width: 100%;
+    }
+    left: 0;
+    position: relative;
+    float: right;
+    background-color: #f5f5fa;
+    transition: all 0.8s;
+}
+
+.openState {
+    .pcSidebar {
+        display: none;
+    }
+    .iphoneSidebar {
+        display: block;
+    }
+    .content {
+        width: calc(100% - 80px);
+    }
+}
+
+a.active {
+    color: $color-primary;
+}

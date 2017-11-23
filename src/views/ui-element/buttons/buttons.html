@@ -1,0 +1,208 @@
+<div class="main-content">
+  <h4 class="page-title">Buttons</h4>
+  <div class="row">
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-heading">
+          8 种按钮颜色主题
+        </div>
+        <div class="panel-body">
+          <ui-button class="btn btn-sm" [loading]="isLoading" (click)="loadData()">btn</ui-button>
+          <ui-button class="btn btn-default btn-sm" [loading]="isLoading" (click)="loadData()">default</ui-button>
+          <ui-button class="btn btn-primary btn-sm" [loading]="isLoading" (click)="loadData()">primary</ui-button>
+          <ui-button class="btn btn-info btn-sm" [loading]="isLoading" (click)="loadData()">info</ui-button>
+          <ui-button class="btn btn-success btn-sm" [loading]="isLoading" (click)="loadData()">success</ui-button>
+          <ui-button class="btn btn-warning btn-sm" [loading]="isLoading" (click)="loadData()">warning</ui-button>
+          <ui-button class="btn btn-danger btn-sm" [loading]="isLoading" (click)="loadData()">danger</ui-button>
+          <ui-button class="btn btn-link btn-sm">link</ui-button>
+          <p>
+            <ui-button class="btn btn-primary btn-block" [loading]="isLoading" (click)="loadData()">btn-block
+            </ui-button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-heading">
+          7 种disabled按钮，左侧一一对应
+        </div>
+        <div class="panel-body">
+          <ui-button class="btn btn-fillet btn-sm" disabled>btn</ui-button>
+          <ui-button class="btn btn-default btn-fillet btn-sm" disabled>default</ui-button>
+          <ui-button class="btn btn-primary btn-fillet btn-sm" disabled>primary</ui-button>
+          <ui-button class="btn btn-info btn-fillet btn-sm" disabled>info</ui-button>
+          <ui-button class="btn btn-success btn-fillet btn-sm" disabled>success</ui-button>
+          <ui-button class="btn btn-warning btn-fillet btn-sm" disabled>warning</ui-button>
+          <ui-button class="btn btn-danger btn-fillet btn-sm" disabled>danger</ui-button>
+          <ui-button class="btn btn-link btn-sm" disabled>link</ui-button>
+          <p>
+            <ui-button class="btn btn-fillet btn-block" disabled>btn-block</ui-button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-heading">
+          4 种按钮尺寸
+        </div>
+        <div class="panel-body">
+          <p class="clear-margin">
+            <ui-button class="btn btn-primary btn-lg">btn-lg</ui-button>
+            <ui-button class="btn btn-lg">btn-lg</ui-button>
+          </p>
+          <p class="clear-margin">
+            <ui-button class="btn btn-primary">btn</ui-button>
+            <ui-button class="btn">btn</ui-button>
+          </p>
+          <p class="clear-margin">
+            <ui-button class="btn btn-primary btn-sm">btn-sm</ui-button>
+            <ui-button class="btn btn-sm">btn-sm</ui-button>
+          </p>
+          <p class="clear-margin">
+            <ui-button class="btn btn-primary btn-xs">btn-xs</ui-button>
+            <ui-button class="btn btn-xs">btn-xs</ui-button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-heading">
+          按钮组
+        </div>
+        <div class="panel-body">
+          <div class="btn-group">
+            <ui-button class="btn btn-primary">新增</ui-button>
+            <ui-button class="btn btn-primary">删除</ui-button>
+            <ui-button class="btn btn-primary">修改</ui-button>
+          </div>
+          <div class="btn-group">
+            <ui-button class="btn btn-info">新增</ui-button>
+            <ui-button class="btn btn-info">删除</ui-button>
+            <ui-button class="btn btn-info">修改</ui-button>
+          </div>
+          <div class="btn-group">
+            <ui-button class="btn btn-warning btn-sm">新增</ui-button>
+            <ui-button class="btn btn-warning btn-sm">删除</ui-button>
+            <ui-button class="btn btn-warning btn-sm">修改</ui-button>
+          </div>
+          <div class="btn-group">
+            <ui-button class="btn btn-success btn-sm">新增</ui-button>
+            <ui-button class="btn btn-success btn-sm">删除</ui-button>
+            <ui-button class="btn btn-success btn-sm">修改</ui-button>
+          </div>
+          <div class="btn-group">
+            <ui-button class="btn btn-danger btn-sm">新增</ui-button>
+            <ui-button class="btn btn-danger btn-sm">删除</ui-button>
+            <ui-button class="btn btn-danger btn-sm">修改</ui-button>
+          </div>
+          <div class="btn-group">
+            <ui-button class="btn btn-default btn-xs">
+              <span class="icon-arrow-left"></span>
+            </ui-button>
+            <ui-button class="btn btn-default btn-xs">
+              <span class="icon-company"></span>
+            </ui-button>
+            <ui-button class="btn btn-default btn-xs">
+              <span class="icon-arrow-right"></span>
+            </ui-button>
+          </div>
+          <div class="btn-group">
+            <ui-button class="btn btn-xs">
+              <span class="icon-arrow1-left"></span>
+            </ui-button>
+            <ui-button class="btn btn-xs">
+              <span class="icon-add"></span>
+            </ui-button>
+            <ui-button class="btn btn-xs">
+              <span class="icon-arrow1-right"></span>
+            </ui-button>
+          </div>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-heading">
+          下拉框
+        </div>
+        <div class="panel-body">
+          <ui-select class="form-control input-lg primary fill" [(ngModel)]="selectValue">
+            <ui-option value="1">风险类型1</ui-option>
+            <ui-option value="2">风险类型2</ui-option>
+            <ui-option value="3">风险类风险类型3风险类型3风险类型3风险类型3型3</ui-option>
+          </ui-select>
+          <ui-select class="form-control input-lg fill" [(ngModel)]="selectValue">
+            <ui-option value="1">风险类型1</ui-option>
+            <ui-option value="2">风险类型2</ui-option>
+            <ui-option value="6">风险类型3</ui-option>
+          </ui-select>
+          <br>
+          <ui-select class="form-control info fill" [(ngModel)]="selectValue">
+            <ui-option value="1">风险类型1</ui-option>
+            <ui-option value="2">风险类型2</ui-option>
+            <ui-option value="3">风险类型3</ui-option>
+          </ui-select>
+          <ui-select class="form-control fill" [(ngModel)]="selectValue">
+            <ui-option value="1">风险类型1</ui-option>
+            <ui-option value="2">风险类型2</ui-option>
+            <ui-option value="6">风险类型3</ui-option>
+          </ui-select>
+          <br>
+          <ui-select class="form-control warning input-sm fill" [(ngModel)]="selectValue">
+            <ui-option value="1">风险类型1</ui-option>
+            <ui-option value="2">风险类型2</ui-option>
+            <ui-option value="3">风险类型3</ui-option>
+          </ui-select>
+          <ui-select class="form-control input-sm fill" [(ngModel)]="selectValue">
+            <ui-option value="1">风险类型1</ui-option>
+            <ui-option value="2">风险类型2</ui-option>
+            <ui-option value="6">风险类型3</ui-option>
+          </ui-select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div class="panel">
+        <div class="panel-heading">
+          分页
+        </div>
+        <div class="panel-body">
+          <ui-pagination class="pagination-lg"
+                         [currentPage]="currentPage"
+                         [pages]="pages"
+                         (change)="toPage($event)">
+          </ui-pagination>
+          <br>
+          <br>
+          <ui-pagination [currentPage]="currentPage4"
+                         [pages]="pages"
+                         (change)="toPage($event)">
+          </ui-pagination>
+          <br>
+          <br>
+          <ui-pagination class="pagination-sm"
+                         [currentPage]="currentPage6"
+                         [pages]="pages"
+                         (change)="toPage($event)">
+          </ui-pagination>
+          <br>
+          <br>
+          <ui-pagination class="pagination-xs"
+                         [currentPage]="currentPage8"
+                         [pages]="pages"
+                         (change)="toPage($event)">
+          </ui-pagination>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+<div class="container-fluid header fixed-top layout">
+  <div class="nav-bar">
+    <div class="brand">
+      <a href="javascript:;">UI - 组件</a>
+    </div>
+    <div class="container-fluid">
+      <div class="menu pull-left">
+        <a href="javascript:;" (click)="openMenu()">
+          <span class="icon-arrow2-left"></span>
+        </a>
+      </div>
+      <form (ngSubmit)="search()" class="pull-left search-form">
+        <div class="input-group">
+          <input type="text" class="form-control input-sm auto-width" name="caseNo"
+                 placeholder="primary"
+
+                 placeholder="Search for something……">
+          <span class="input-addon input-addon-btn">
+            <ui-button class="btn btn-info btn-sm btn-icon">
+              <span class="icon-search"></span>
+            </ui-button>
+          </span>
+        </div>
+      </form>
+      <div class=" pull-right">
+        <ul class="nav nav-pills nav-menu">
+          <li routerLinkActive="active"><a routerLink="/icons">字体图标</a></li>
+          <li routerLinkActive="active"><a routerLink="/forms">表单集合</a></li>
+          <li routerLinkActive="active"><a routerLink="/table">提示框</a></li>
+          <li>
+            <ui-drop-down [open]="isShowOpen" (trigger)="isShowOpen = !isShowOpen" (escape)="isShowOpen = false">
+              <ui-drop-down-fixed>
+                <span class="icon-user02"></span>
+                <input type="text" readonly class="form-control" value="基本元素">
+                <div class="ui-drop-arrow">
+                  <span class="caret"></span>
+                </div>
+              </ui-drop-down-fixed>
+              <ui-drop-down-menu>
+                <div class="list">
+                  <a routerLink="/buttons" class="list-item">按钮组</a>
+                  <a routerLink="/tab" class="list-item">选项卡</a>
+                  <a routerLink="/progress" class="list-item">进度条</a>
+                </div>
+              </ui-drop-down-menu>
+            </ui-drop-down>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid main" [ngClass]="{openState:!menuState}">
+  <div class="sidebar pcSidebar">
+    <ul class="nav nav-pills nav-stacked nav-tree">
+      <li [ngClass]="{open: openState[0]}">
+        <a href="javascript:;" (click)="changeOpenState(0)">
+          <i class="icon icon-type"></i>设计规范
+          <span class="icon-arrow1-right pull-right"></span></a>
+        <ul class="nav list-unstyled">
+          <li><a routerLink="./font" routerLinkActive="active">字体颜色</a></li>
+          <li><a routerLink="./icons" routerLinkActive="active">字体图标</a></li>
+        </ul>
+      </li>
+      <li [ngClass]="{open: openState[1]}">
+        <a href="javascript:;" (click)="changeOpenState(1)">
+          <i class="icon icon-type"></i>表格和布局
+          <span class="icon-arrow1-right pull-right"></span></a>
+        <ul class="nav list-unstyled">
+          <li><a routerLink="./grid" routerLinkActive="active">栅格</a></li>
+          <li><a routerLink="./table" routerLinkActive="active">表格</a></li>
+        </ul>
+      </li>
+      <li [ngClass]="{open: openState[2]}">
+        <a href="javascript:;" (click)="changeOpenState(2)">
+          <i class="icon icon-type"></i>基本元素
+          <span class="icon-arrow1-right pull-right"></span></a>
+        <ul class="nav list-unstyled">
+          <li><a routerLink="./buttons" routerLinkActive="active">按钮组</a></li>
+          <li><a routerLink="./forms" routerLinkActive="active">表单集合</a></li>
+          <li><a routerLink="./nav" routerLinkActive="active">导航与面包屑</a></li>
+          <li><a routerLink="./tab" routerLinkActive="active">选项卡</a></li>
+          <li><a routerLink="./progress" routerLinkActive="active">进度条</a></li>
+          <!--<li><a routerLink="./auxiliar" routerLinkActive="active">简单辅助元素</a></li>-->
+        </ul>
+      </li>
+      <li [ngClass]="{open: openState[3]}">
+        <a href="javascript:;" (click)="changeOpenState(3)">
+          <i class="icon icon-type"></i>组件示例
+          <span class="icon-arrow1-right pull-right"></span></a>
+        <ul class="nav list-unstyled">
+          <li><a routerLink="./notify" routerLinkActive="active">提示</a></li>
+          <li><a routerLink="./model" routerLinkActive="active">弹出框</a></li>
+          <li><a routerLink="./date" routerLinkActive="active">日期时间</a></li>
+          <!--<li><a routerLink="./page" routerLinkActive="active">分页</a></li>-->
+          <li><a routerLink="./upload" routerLinkActive="active">文件上传</a></li>
+          <!--<li><a routerLink="./tree" routerLinkActive="active">树形菜单</a></li>-->
+          <!--<li><a routerLink="./flow" routerLinkActive="active">流加载</a></li>-->
+          <li><a routerLink="./slide" routerLinkActive="active">幻灯片</a></li>
+        </ul>
+      </li>
+      <li [ngClass]="{open: openState[4]}" (click)="changeOpenState(4)"><a routerLink="./other" routerLinkActive="active"><i class="icon icon-type"></i>其他</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<ui-confirm class="primary"></ui-confirm>
+<ui-notify class="primary"></ui-notify>

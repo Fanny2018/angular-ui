@@ -1,0 +1,16 @@
+@import "../../assets/scss/varibles.scss";
+
+.code-search {
+    > .title {
+        margin: 0 $grid-column-padding*2;
+    }
+}
+
+h4 {
+    height: 30px;
+    line-height: 30px;
+}
+
+.panel {
+    margin-bottom: 25px;
+}

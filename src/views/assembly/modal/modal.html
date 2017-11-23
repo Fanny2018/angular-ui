@@ -1,0 +1,75 @@
+<div class="main-content">
+  <h4 class="page-title">Model options</h4>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          Confirm
+        </div>
+        <div class="panel-body">
+          <div class="panel-body p-t p-b">
+            Size：
+            <ui-button class="btn btn-sm btn-default m-b" (click)="showLg()">large</ui-button>
+            <ui-button class="btn btn-sm btn-default m-b" (click)="showMd()">middle</ui-button>
+            <ui-button class="btn btn-sm btn-default m-b" (click)="showSm()"> sm</ui-button>
+            <br>
+            Position：
+            <ui-button class="btn btn-sm btn-default m-md-sm" (click)="showTop()">top</ui-button>
+            <ui-button class="btn btn-sm btn-default m-md-sm" (click)="showRight()">right</ui-button>
+            <ui-button class="btn btn-sm btn-default m-md-sm" (click)="showBottom()">bottom</ui-button>
+            <ui-button class="btn btn-sm btn-default m-md-sm" (click)="showLeft()">left</ui-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          Modal
+        </div>
+        <div class="panel-body">
+          <div class="panel-body p-t p-b text-center">
+            <ui-button class="btn btn-sm btn-default m-md btn-block" (click)="modelTop()">Modal Top</ui-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ui-modal (onClose)="isShowDialog = false"
+          [isShow]="isShowDialog"
+          [isShowToolbar]="false" [isShowScroll]="true"
+          [position]="'top'">
+  <div renderTo="content">
+    <p>
+      公司隶属于中新力合控股集团（品牌：“正信用”，以下简称“正信用”），以“温州金改”为契机，于2013年11月13日正式成立，次年获得人民银行颁发的“企业征信业务经营备案证”，是目前浙江省内获得第三方企业征信牌照的六家征信机构之一。
+    </p>
+    <p>
+      作为一家
+      “互联网+征信”的新型信用服务机构，正信用与时俱进，致力于整合海量正负向数据，运用创新的信用评估体系、独特的市场分析方法，量化中小微企业信用资本，建立经济背景下的商业大数据风险评价机制。正信用以“业务驱动产品、产品塑造品牌”的模式，坚持将征信产品与特定业务场景紧密结合，为企业提供精准、快捷、全面、有效的征信服务，并最终实现“正信用，让商业生活更美好”的远大愿景。</p>
+    <p>
+      旗下产品“智能云风控”（https://e.zhengxinyong.com），以支持多源异构数据采集、清洗、整合加工的数据管理平台为基础，通过多维度的海量数据，对8000+万家企业信息进行全自动、全天候的深度挖掘、客观分析、实时监测和预警推送，为各类泛金融企业实现企业数据价值最大化，摆脱地域时间限制，提升业务运作的高效性，并及时有效降低企业信贷风险，为商业决策提供依据。现合作伙伴已遍布杭州、北京、上海、苏州、温州等多地。
+
+      目前，正信用拥有一支顶尖的技术研发团队，其核心人员具有超过10年风控、金融及IT各行业的丰富经验，在数据分析、模型构建、理论创新等方面具有较强的实力，为用户提供更有价值的征信服务，做更值得信赖的合作伙伴！
+    </p>
+    <p>
+      公司隶属于中新力合控股集团（品牌：“正信用”，以下简称“正信用”），以“温州金改”为契机，于2013年11月13日正式成立，次年获得人民银行颁发的“企业征信业务经营备案证”，是目前浙江省内获得第三方企业征信牌照的六家征信机构之一。
+    </p>
+    <p>
+      作为一家
+      “互联网+征信”的新型信用服务机构，正信用与时俱进，致力于整合海量正负向数据，运用创新的信用评估体系、独特的市场分析方法，量化中小微企业信用资本，建立经济背景下的商业大数据风险评价机制。正信用以“业务驱动产品、产品塑造品牌”的模式，坚持将征信产品与特定业务场景紧密结合，为企业提供精准、快捷、全面、有效的征信服务，并最终实现“正信用，让商业生活更美好”的远大愿景。</p>
+    <p>
+      旗下产品“智能云风控”（https://e.zhengxinyong.com），以支持多源异构数据采集、清洗、整合加工的数据管理平台为基础，通过多维度的海量数据，对8000+万家企业信息进行全自动、全天候的深度挖掘、客观分析、实时监测和预警推送，为各类泛金融企业实现企业数据价值最大化，摆脱地域时间限制，提升业务运作的高效性，并及时有效降低企业信贷风险，为商业决策提供依据。现合作伙伴已遍布杭州、北京、上海、苏州、温州等多地。
+
+      目前，正信用拥有一支顶尖的技术研发团队，其核心人员具有超过10年风控、金融及IT各行业的丰富经验，在数据分析、模型构建、理论创新等方面具有较强的实力，为用户提供更有价值的征信服务，做更值得信赖的合作伙伴！
+    </p>
+    <p>
+      作为一家
+      “互联网+征信”的新型信用服务机构，正信用与时俱进，致力于整合海量正负向数据，运用创新的信用评估体系、独特的市场分析方法，量化中小微企业信用资本，建立经济背景下的商业大数据风险评价机制。正信用以“业务驱动产品、产品塑造品牌”的模式，坚持将征信产品与特定业务场景紧密结合，为企业提供精准、快捷、全面、有效的征信服务，并最终实现“正信用，让商业生活更美好”的远大愿景。</p>
+    <p>
+      旗下产品“智能云风控”（https://e.zhengxinyong.com），以支持多源异构数据采集、清洗、整合加工的数据管理平台为基础，通过多维度的海量数据，对8000+万家企业信息进行全自动、全天候的深度挖掘、客观分析、实时监测和预警推送，为各类泛金融企业实现企业数据价值最大化，摆脱地域时间限制，提升业务运作的高效性，并及时有效降低企业信贷风险，为商业决策提供依据。现合作伙伴已遍布杭州、北京、上海、苏州、温州等多地。
+
+      目前，正信用拥有一支顶尖的技术研发团队，其核心人员具有超过10年风控、金融及IT各行业的丰富经验，在数据分析、模型构建、理论创新等方面具有较强的实力，为用户提供更有价值的征信服务，做更值得信赖的合作伙伴！
+    </p>
+  </div>
+</ui-modal>

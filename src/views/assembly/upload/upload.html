@@ -1,0 +1,84 @@
+<div class="main-content">
+  <h4 class="page-title">Model options</h4>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          image-upload
+        </div>
+        <div class="panel-body">
+          <div class="panel-body">
+            <div class="text color-muted">
+              <p>新头像不允许涉及政治敏感与色情;</p>
+              <p>图片格式必须为：png,bmp,jpeg,jpg,gif；不可大于2M；建议使用png格式图片，以保持最佳效果；</p>
+              <p>建议图片尺寸为144px*144px</p>
+            </div>
+            <div class="modify-content">
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="m-t m-b">
+                    <ui-upload
+                            [isAutoUpload]="true"
+                            (onUpload)="imageUpload($event)"
+                            [uploadType]="'image'"
+                            #fileUpload
+                            [ext]="'jpe?g|png'"
+                            (onError)="imageError($event)"
+                            (onUploaded)="imageUploaded($event)">
+                      <ui-button class="btn btn-sm" (click)="fileUpload.doUpload()">选择图片</ui-button>
+                    </ui-upload>
+                  </div>
+                  <div class="img-view img-responsive">
+                    <!--<img src="../../../assets/images/ab.jpeg">-->
+                    <img [attr.src]="imgUrl">
+                    <!--<img [src]="imgUrl || ''">-->
+                  </div>
+                  <div class="color-danger">
+                    {{imgErrorInfo}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          file-upload
+        </div>
+        <div class="panel-body">
+          <div class="panel-body m-md">
+            <ui-upload
+                    [isAutoUpload]="false"
+                    (onUpload)="onUpload($event)"
+                    [uploadType]="'file'"
+                    #fileUpload
+                    [ext]="'xlsx?'"
+                    (onError)="onError($event)"
+                    (onUploaded)="onUploaded($event)"
+                    (onValidate)="onValidate($event)">
+              <div class="file-upload">
+                <div class="input-group">
+                  <input type="text" class="form-control auto-width input-sm"
+                         name="file-name"
+                         [(ngModel)]="uploadFileName"
+                         readonly>
+                  <span class="input-addon input-addon-btn">
+                    <ui-button class="btn btn-primary btn-sm">
+                    选择文件
+                  </ui-button>
+                  </span>
+                </div>
+              </div>
+              <div class="color-danger">
+                {{fileErrorInfo}}
+              </div>
+            </ui-upload>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

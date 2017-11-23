@@ -1,0 +1,25 @@
+.slide-wrap {
+    height: 300px;
+    margin-top: 50px;
+}
+
+ui-slide-item {
+    font-size: 40px;
+    line-height: 200px;
+
+}
+
+.slide1 {
+    background-size: cover;
+    background: url('../../../assets/images/a.jpg') no-repeat;
+}
+
+.slide2 {
+    background-size: cover;
+    background: url('../../../assets/images/b.jpg') no-repeat;
+}
+
+.slide3 {
+    background-size: cover;
+    background: url('../../../assets/images/c.jpg') no-repeat;
+}

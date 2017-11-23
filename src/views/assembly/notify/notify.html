@@ -1,0 +1,69 @@
+<div class="main-content">
+  <h4 class="page-title">Progress options</h4>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          Notify Progress
+        </div>
+        <div class="panel-body p-t p-b text-center">
+          <ui-button class="btn btn-sm btn-default m-md" (click)="showWDefault()">right</ui-button>
+          <ui-button class="btn btn-sm btn-default m-md" (click)="showInfo()">Top</ui-button>
+          <br>
+          <ui-button class="btn btn-sm btn-default m-md" (click)="showPrimary()">left</ui-button>
+          <ui-button class="btn btn-sm btn-default m-md" (click)="showSuccess()">bottom</ui-button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="panel">
+        <div class="panel-heading">
+          Tooltips
+        </div>
+        <div class="panel-body p-t p-b text-center">
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="Emoji? No problem 😎"
+                     data-microtip-position="top-left"
+                     data-microtip-color="default">Top Left
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="Its me. I am a leftist. Get it?"
+                     data-microtip-position="top"
+                     data-microtip-color="info">Top
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="Emoji? No problem 😎"
+                     data-microtip-position="top-right"
+                     data-microtip-color="primary">Top Right
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="I am a large tooltip. I come with no wrapping or pretty pink bows. I am who I am from my head to my toes. I tend to get loud when speaking my mind. Even a little crazy some of the time."
+                     data-microtip-position="left"
+                     data-microtip-size="large"
+                     data-microtip-color="success">Left
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="I am a medium size tooltip. Use me for slightly longer messages"
+                     data-microtip-position="right"
+                     data-microtip-size="medium"
+                     data-microtip-color="warning">Right
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="I am a medium sized tooltip to the bottom left"
+                     data-microtip-position="bottom-left"
+                     data-microtip-size="medium">Bottom Left
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="I am a small message"
+                     data-microtip-position="bottom"
+                     data-microtip-size="small">Bottom
+          </ui-button>
+          <ui-button class="btn btn-sm btn-default m-md"
+                     data-microtip="Look, its me at the bottom right"
+                     data-microtip-position="bottom-right">Bottom Right
+          </ui-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

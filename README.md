@@ -3,12 +3,11 @@
 >  非常简单的一个angular4 + webpack的UI组件库，拓展了部分表单控件，提供了很多网页的视觉交互组件、指令、服务、过滤器等。
 
 >  开发环境 macOS 10.12.3  Chrome 56 nodejs 6.10.0
-
+## 查看Demo
+**[查看Demo](https://fanny2018.github.io/angular-ui/dist/index.htm)**
 
 ## 项目运行（nodejs 6.0+）
 ``` bash
-# 查看Demo
-**[查看Demo](https://fanny2018.github.io/angular-ui/dist/index.htm)**
 
 # 克隆到本地
 git clone https://github.com/Fanny2018/angular-ui.git

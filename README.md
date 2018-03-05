@@ -8,7 +8,7 @@
 ## 项目运行（nodejs 6.0+）
 ``` bash
 # 查看Demo
-https://fanny2018.github.io/angular-ui/dist/index.html
+**[查看Demo](https://fanny2018.github.io/angular-ui/dist/index.htm)**
 
 # 克隆到本地
 git clone https://github.com/Fanny2018/angular-ui.git

@@ -29,7 +29,7 @@ import { OtherComponent } from './other/other';
 
 const appRoutes: Routes = [{
     path: '',
-    redirectTo: 'angular-ui/dist/icons',
+    redirectTo: 'icons',
     pathMatch: 'full'
 }, {
     path: 'buttons',
@@ -41,7 +41,7 @@ const appRoutes: Routes = [{
     path: 'forms',
     component: FormsComponent
 }, {
-    path: 'angular-ui/dist/icons',
+    path: 'icons',
     component: IconsComponent
 }, {
     path: 'font',

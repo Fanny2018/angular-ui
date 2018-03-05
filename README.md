@@ -4,7 +4,7 @@
 
 >  开发环境 macOS 10.12.3  Chrome 56 nodejs 6.10.0
 ## 查看Demo
-**[点击预览](https://fanny2018.github.io/angular-ui/dist/index.htm)**
+**[点击预览](https://fanny2018.github.io/angular-ui/dist/index.html)**
 
 ## 项目运行（nodejs 6.0+）
 ``` bash

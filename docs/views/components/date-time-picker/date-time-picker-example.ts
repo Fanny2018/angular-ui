@@ -6,10 +6,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DateTimePickerExampleComponent {
     value = '';
+
     constructor(public activatedRoute: ActivatedRoute) {
     }
 
-    onSelected($event) {
+    onSelected($event: any) {
         this.value = $event;
     }
 }

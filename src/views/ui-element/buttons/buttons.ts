@@ -7,13 +7,20 @@ import { Component } from '@angular/core';
 export class ButtonsComponent {
     isLoading: boolean = false;
     selectValue: string = '1';
-    pages = 10;
-    currentPage4 = 4;
+    pages: number = 10;
+    currentPage4: number = 4;
+    currentPage6: number = 4;
+    currentPage8: number = 4;
+    currentPage: number = 4;
 
     loadData() {
         this.isLoading = true;
         setTimeout(() => {
             this.isLoading = false;
         }, 1000);
+    }
+
+    toPage(number: any) {
+        console.log(number);
     }
 }

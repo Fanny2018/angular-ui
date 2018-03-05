@@ -1,0 +1,35 @@
+.form-horizontal {
+    .control-label {
+        padding-top: $form-control-padding-vertical;
+        margin-bottom: 0;
+        text-align: right;
+        font-size: $form-control-font-size-base;
+        &.control-sm {
+            padding-top: $form-control-padding-vertical-sm;
+            font-size: $form-control-font-size-sm;
+        }
+        &.control-lg {
+            padding-top: $form-control-padding-vertical-lg;
+            font-size: $form-control-font-size-lg;
+        }
+    }
+    .error {
+        padding: 0;
+    }
+}
+
+.form-inline {
+    .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+    .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .input-group {
+        width: auto;
+    }
+}

@@ -7,6 +7,8 @@
 
 ## 项目运行（nodejs 6.0+）
 ``` bash
+# 查看Demo
+
 # 克隆到本地
 git clone https://github.com/Fanny2018/angular-ui.git
 

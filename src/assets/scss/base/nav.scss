@@ -1,0 +1,368 @@
+.nav {
+    margin: 0;
+    @include list-unstyled;
+    @include clearfix;
+    > li {
+        position: relative;
+        display: block;
+        > a {
+            position: relative;
+            display: block;
+            padding: $nav-link-padding;
+            color: $color-default;
+            &:hover {
+                color: $color-darker;
+            }
+            > img {
+                max-width: none;
+            }
+        }
+        &.disabled > a {
+            color: $disabled-color;
+            &:hover {
+                color: $disabled-color;
+                background-color: transparent;
+                cursor: $cursor-disabled;
+            }
+        }
+        &.open > a {
+            background-color: $color-lighter;
+        }
+        ui-drop-down-fixed > .form-control {
+            border: none;
+            font-size: 14px;
+            padding: 9px 8px;
+            width: 100px;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.nav-tabs {
+    border-bottom: 1px solid $color-light;
+
+    > li {
+        float: left;
+        margin-bottom: -1px;
+        > a {
+            margin-right: 2px;
+            line-height: $line-height;
+            border: 1px solid transparent;
+            @if $button-radius-is-open {
+                border-radius: $radius-base $radius-base 0 0;
+            }
+            &:hover {
+                border-color: $color-light;
+                background-color: lighten($color-lighter, 2);
+            }
+        }
+        &.active > a {
+            border-color: $color-light;
+            background-color: #fff;
+            border-bottom-color: transparent;
+        }
+    }
+    &.primary {
+        border-bottom-color: $color-primary;
+        > li {
+            > a {
+                color: $color-primary;
+                border: 1px solid transparent;
+                &:hover {
+                    border-color: $color-primary $color-primary $color-primary;
+                    background-color: #edfdff;
+                }
+            }
+            &.active > a {
+                border-color: $color-primary $color-primary $color-primary;
+                border-bottom-color: transparent;
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    &.nav-justified {
+        @extend .nav-justified;
+        @extend .nav-tabs-justified;
+    }
+}
+
+.nav-pills {
+    > li {
+        float: left;
+        > a {
+            @if $button-radius-is-open {
+                border-radius: $radius-base;
+            }
+            &:hover {
+                background-color: darken($color-lighter, 1);
+            }
+        }
+        + li {
+            margin-left: 2px;
+        }
+        &.active > a {
+            background-color: $color-lighter;
+            &:hover {
+                background-color: darken($color-lighter, 1);
+            }
+        }
+    }
+    &.primary > li {
+        &.active > a {
+            background-color: $color-primary;
+            color: #fff;
+            &:hover {
+                background-color: darken($color-primary, 1);
+            }
+        }
+    }
+}
+
+.nav-justified {
+    width: 100%;
+    > li {
+        float: none;
+        > a {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    }
+    > .dropdown .dropdown-menu {
+        top: auto;
+        left: auto;
+    }
+    @media(min-width: $screen-sm-min) {
+        > li {
+            display: table-cell;
+            width: 1%;
+            > a {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.nav-tabs-justified {
+    border-bottom: 0;
+    > li > a {
+        margin-right: 0;
+        @if $button-radius-is-open {
+            border-radius: $radius-base;
+        }
+    }
+    > a.hover {
+        border: 1px solid $color-light;
+    }
+    @media(min-width: $screen-sm-min) {
+        > li > a {
+            border-bottom: 1px solid $color-light;
+            @if $button-radius-is-open {
+                border-radius: $radius-base $radius-base 0 0;
+            }
+        }
+        > .active > a,
+        > .active > a:hover,
+        > .active {
+            border-bottom-color: transparent;
+        }
+    }
+}
+
+.nav-stacked {
+    > li {
+        float: none;
+        + li {
+            margin-top: 2px;
+            margin-left: 0;
+        }
+    }
+}
+
+// 超出隐藏
+.nav-more {
+    overflow: hidden;
+    height: 40px;
+    position: relative;
+    transition: all .2s;
+    &.open {
+        height: auto;
+        overflow: auto;
+    }
+    .tab-arrow {
+        position: absolute;
+        right: 0;
+        top: -1px;
+        z-index: 10;
+        border: 1px solid $color-gray-light;
+        border-top-right-radius: 6px;
+        text-align: center;
+        background-color: #fff;
+        cursor: pointer;
+        height: 42px;
+        line-height: 42px;
+        display: inline-block;
+        width: 40px;
+        border-right: none;
+    }
+}
+
+// 卡片式选项卡
+.tab-card {
+    border: 1px solid $color-gray-light;
+    @if $is-open-radius {
+        border-radius: $radius-base;
+    }
+    > .nav-tabs {
+        overflow: hidden;
+        background-color: $color-lighter;
+        > li {
+            > a {
+                margin-right: -1px;
+                margin-left: -1px;
+                border-radius: 0;
+                border-top: none;
+                &:hover {
+                    background-color: inherit;
+                    border-right-color: transparent;
+                    border-left-color: transparent;
+                }
+            }
+            &.active > a {
+                &:hover {
+                    background-color: #fff;
+                    border-right-color: $color-gray-light;
+                    border-left-color: $color-gray-light;
+                }
+            }
+            &:first-child {
+                &.active > a {
+                    @if $is-open-radius {
+                        border-top-left-radius: $radius-base;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 菜单
+.nav-menu {
+    > li {
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: $color-primary;
+            transition: all .3s;
+        }
+        &:hover, &.active {
+            &:after {
+                left: 0;
+                width: 100%;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        > a {
+            border-radius: 0;
+            &:hover {
+                background-color: transparent;
+            }
+
+        }
+    }
+    &.menu-black {
+        background-color: $menu-bg-color;
+        > li {
+            > a {
+                color: #fff;
+            }
+            ui-drop-down-fixed {
+                color: #fff;
+                > .form-control, span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// 二级菜单树
+.nav-tree {
+    background-color: $menu-bg-color;
+    > li {
+        > a {
+            padding: 18px 20px;
+            color: #fff;
+            border-left: 4px solid transparent;
+            background-color: transparent;
+            border-radius: 0;
+            .icon {
+                font-size: 18px;
+                padding-right: 10px;
+            }
+            &:hover {
+                color: $color-info;
+                background-color: transparent;
+                border-left-color: $color-info;
+                .icon {
+                    color: $color-info;
+                }
+            }
+            &.active {
+                color: $color-info;
+                //background-color: #252c35;
+                border-left-color: $color-info;
+                .icon {
+                    color: $color-info;
+                }
+            }
+        }
+        &.open {
+            color: #fff;
+            background-color: #252c35;
+            transition: all 0.4s;
+            > a {
+                background-color: $menu-bg-color;
+                color: $color-info;
+                border-left-color: $color-info;
+                .icon-arrow1-right {
+                    transform: rotate(90deg);
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+            .icon {
+                color: $color-info;
+            }
+            ul {
+                max-height: 600px;
+            }
+        }
+        > .nav {
+            max-height: 0;
+            transition: max-height .4s;
+            overflow: hidden;
+            > li > a {
+                background-color: #212d3c;
+                color: #fff;
+                &.active {
+                    color: $color-info;
+                }
+                &:hover {
+                    color: #fff;
+                }
+                padding: 10px 20px 10px 50px;
+            }
+        }
+    }
+}

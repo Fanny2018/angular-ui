@@ -1,0 +1,11 @@
+<div class="tool-tip"
+     (mouseenter)="mouseOver()"
+     (mouseleave)="mouseOut()"
+     (touchend)="mouseOut()">
+  <div>
+    <ng-content select="[renderTo=fixed]"></ng-content>
+  </div>
+  <div class="tool-tip-content iphone-hide" [ngClass]="placement + (isShow ? ' show':'')">
+    <ng-content select="[renderTo=content]"></ng-content>
+  </div>
+</div>

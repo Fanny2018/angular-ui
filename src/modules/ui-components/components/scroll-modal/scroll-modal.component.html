@@ -1,0 +1,17 @@
+<div class="scroll-modal primary" *ngIf="isShow"
+     [ngClass]="{'in': inout, 'show': isShow}">
+    <div class="scroll-confirm" [ngClass]="{'modal-lg': size === 'lg',
+     'modal-sm': size === 'sm',
+     'modal-md': size === 'md',
+     'left':position==='left',
+     'right':position==='right',
+     'top':position==='top',
+     'bottom':position==='bottom'}">
+        <div class="scroll-confirm-body">
+            <ng-content select="[renderTo=content]"></ng-content>
+        </div>
+        <div class="scroll-confirm-footer text-center" *ngIf="isShowToolbar">
+            <ng-content select="[renderTo=toolbar]"></ng-content>
+        </div>
+    </div>
+</div>

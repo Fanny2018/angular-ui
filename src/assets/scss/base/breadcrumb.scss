@@ -1,0 +1,26 @@
+.breadcrumb {
+    padding: 8px 15px;
+    list-style: none;
+    > li {
+        display: inline-block;
+        > a:hover {
+            color: $color-primary;
+        }
+        + li:before {
+            $nbsp: "\00a0";
+            content: "#{$breadcrumb-separator}#{$nbsp}";
+            padding: 0 5px;
+            color: $color-gray-light;
+        }
+    }
+    &.arrow {
+        > li + li:before {
+            font-family: 'icomoon' !important;
+            $nbsp: "\00a0";
+            content: "#{$breadcrumb-separator-arrow}#{$nbsp}";
+        }
+    }
+    > .active {
+        color: $color-primary;
+    }
+}

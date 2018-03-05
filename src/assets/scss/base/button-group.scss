@@ -1,0 +1,104 @@
+.btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    > .btn {
+        position: relative;
+        float: left;
+        min-width: 70px;
+        border-radius: 0;
+        border-left: 1px solid $color-gray-light;
+        &.btn-sm, &.btn-xs {
+            min-width: 50px;
+        }
+        &.btn-default {
+            border-left: 1px solid lighten($color-primary, 6);
+        }
+        &.btn-primary {
+            border-left: 1px solid lighten($color-primary, 6);
+        }
+        &.btn-info {
+            border-left: 1px solid lighten($color-info, 6);
+        }
+        &.btn-warning {
+            border-left: 1px solid lighten($color-warning, 6);
+        }
+        &.btn-danger {
+            border-left: 1px solid lighten($color-danger, 6);
+        }
+        &.btn-success {
+            border-left: 1px solid lighten($color-success, 6);
+        }
+        &:hover,
+        &:focus,
+        &.active {
+            z-index: 2;
+        }
+    }
+}
+
+.btn-group {
+    .btn + .btn,
+    .btn + .btn-group,
+    .btn-group + .btn,
+    .btn-group + .btn-group {
+        margin-left: -1px;
+    }
+}
+
+.btn-group > .btn, .btn-group > ui-button {
+    margin-left: 0;
+    &:hover, &.active {
+        border: 1px solid $color-primary;
+        color: $color-primary;
+    }
+    &.btn-default > &:first-child {
+        border-left-color: $color-primary;
+    }
+    &.btn-default {
+        &:hover {
+            z-index: 2;
+            border: 1px solid $color-primary;
+        }
+    }
+    &.btn-primary {
+        &:hover {
+            border-color: $color-primary;
+            color: #fff;
+        }
+    }
+    &.btn-info {
+        &:hover {
+            border-color: $color-info;
+            color: #fff;
+        }
+    }
+    &.btn-warning {
+        &:hover {
+            border-color: $color-warning;
+            color: #fff;
+        }
+    }
+    &.btn-danger {
+        &:hover {
+            border-color: $color-danger;
+            color: #fff;
+        }
+    }
+    &.btn-success {
+        &:hover {
+            border-color: $color-success;
+            color: #fff;
+        }
+    }
+    @if $is-open-radius {
+        &:first-child {
+            border-top-left-radius: $button-radius;
+            border-bottom-left-radius: $button-radius;
+        }
+        &:last-child {
+            border-top-right-radius: $button-radius;
+            border-bottom-right-radius: $button-radius;
+        }
+    }
+}

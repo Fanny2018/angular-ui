@@ -1,0 +1,125 @@
+ui-confirm, .ui-con {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: $confirm-z-index;
+    display: none;
+    &.show {
+        display: block;
+    }
+    .ui-confirm {
+        position: absolute;
+        width: $confirm-width;
+        background-color: #fff;
+        @if $button-radius-is-open {
+            border-radius: 10px;
+        }
+        &.modal-sm {
+            width: $confirm-width-sm;
+        }
+        &.modal-lg {
+            width: $confirm-width-lg;
+        }
+        &.top {
+            left: 50%;
+            top: 0;
+            right: initial;
+            transform: translateX(-50%);
+        }
+        &.left {
+            left: 0;
+            top: 50%;
+            right: initial;
+            transform:translateY(-50%);
+        }
+        &.right {
+            right: 0;
+            top: 50%;
+            left: initial;
+            transform: translateY(-50%) !important;
+        }
+        &.bottom {
+            left: 50%;
+            top: initial;
+            bottom: 0;
+            margin-left: -$confirm-width/2;
+            transform: translateY(0) !important;
+        }
+        &.middle {
+            top: 50%;
+            left: 50%;
+            margin-left: -$confirm-width/2;
+            transform: translateY(-50%) !important;
+        }
+        > .ui-confirm-title {
+            padding: 6px $grid-column-padding;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: normal;
+            line-height: 27px;
+            @if $button-radius-is-open {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            > button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                transition: all .3s;
+                font-size: 18px;
+                font-weight: bold;
+                opacity: 1;
+                &:hover {
+                    transform: rotateZ(-360deg);
+                }
+            }
+        }
+        > .ui-confirm-body {
+            min-height: $confirm-height - 64 - 46;
+            border-top: 1px solid $color-gray-light;
+            border-bottom: 1px solid $color-gray-light;
+            padding: $grid-column-padding*2;
+            line-height: 1.4em;
+            &.scroll {
+                overflow-y: scroll;
+                max-height: 600px;
+                margin: 10px 0 30px 10px;
+            }
+        }
+        > .ui-confirm-footer {
+            padding: $grid-column-padding*2;
+            button {
+                margin: 0 $grid-column-padding;
+            }
+        }
+    }
+    &.primary {
+        > .ui-confirm {
+            > .ui-confirm-title {
+                background-color: $color-primary;
+                color: #fff;
+                .close {
+                    color: #fff;
+                }
+            }
+            > .ui-confirm-body {
+                border: none;
+            }
+        }
+    }
+}
+
+ui-modal {
+    .ui-con {
+        display: none;
+        .ui-confirm {
+            transition: transform .3s ease-out;
+        }
+        &.show {
+            display: block;
+        }
+    }
+}

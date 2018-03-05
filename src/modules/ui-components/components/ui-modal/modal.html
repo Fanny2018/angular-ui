@@ -1,0 +1,25 @@
+<div class="ui-con primary" *ngIf="isShow"
+     [ngClass]="{'in': inout, 'show': isShow}">
+  <div class="ui-confirm"
+       [ngClass]="{'modal-lg': size === 'lg',
+     'modal-sm': size === 'sm',
+     'modal-md': size === 'md',
+     'left':position==='left',
+     'right':position==='right',
+     'top':position==='top',
+     'bottom':position==='bottom',
+     'middle':position==='middle',
+     'modal-fixed':size==='fixed-width'}">
+    <h5 class="ui-confirm-title clearfix" *ngIf="isShowTitle">
+      {{title || '系统消息'}}
+      <button (click)="onClose.emit()" type="button" class="pull-right close"><span class="icon-close2"></span>
+      </button>
+    </h5>
+    <div class="ui-confirm-body" [ngClass]="{'scroll':isShowScroll && isShow}">
+      <ng-content select="[renderTo=content]"></ng-content>
+    </div>
+    <div class="ui-confirm-footer text-center" *ngIf="isShowToolbar">
+      <ng-content select="[renderTo=toolbar]"></ng-content>
+    </div>
+  </div>
+</div>

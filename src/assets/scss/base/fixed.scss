@@ -1,0 +1,17 @@
+.fixed-top, .fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: $nav-bar-z-index;
+}
+
+.fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+
+.fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+}

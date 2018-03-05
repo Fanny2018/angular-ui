@@ -1,0 +1,16 @@
+<div class="drag-tag" [ngClass]="editable ? 'edit-drag' : ''">
+  <button type="button"
+          [disabled]="disabled && !editable"
+          [ngClass]="disabled ? 'disabled' : ''"
+          (mousedown)="move($event)">
+    <span>
+      <i class="color-primary"
+         [ngClass]="checked ? 'icon-hook01' : 'icon-check2'">
+    </i>
+    {{text}}
+      <b class="tooltip" *ngIf="!editable && disabled">
+        管理员权限才可进行修改
+      </b>
+    </span>
+  </button>
+</div>

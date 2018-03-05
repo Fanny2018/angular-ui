@@ -1,0 +1,45 @@
+@mixin panel-theme($color) {
+    $c: $color;
+    border: 1px solid $c;
+    > .panel-heading {
+        background-color: $c;
+        border-bottom-color: $c;
+        color: #fff;
+    }
+}
+
+.panel {
+    border-top: 1px solid $panel-border-color;
+    //overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    @if $panel-radius-is-open {
+        border-radius: $panel-radius;
+    }
+    > .panel-heading {
+        background-color: #fff;
+        border-bottom: 1px solid $panel-border-color;
+        padding: $grid-column-padding $grid-column-padding;
+    }
+    > .panel-body {
+        padding: $grid-column-padding+5px;
+        background-color: #fff;
+    }
+    &.panel-default {
+        @include panel-theme($color-default);
+    }
+    &.panel-primary {
+        @include panel-theme($color-primary);
+    }
+    &.panel-info {
+        @include panel-theme($color-info);
+    }
+    &.panel-success {
+        @include panel-theme($color-success);
+    }
+    &.panel-warning {
+        @include panel-theme($color-warning);
+    }
+    &.panel-danger {
+        @include panel-theme($color-danger);
+    }
+}

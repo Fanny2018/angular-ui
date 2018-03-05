@@ -1,0 +1,12 @@
+<div class="tag-tip">
+  <div>
+    <ng-content select="[renderTo=fixed]"></ng-content>
+    <div class="tag" (mouseenter)="mouseOver()" (mouseleave)="mouseOut()">
+      <span class="cart"></span>
+      <span class="icon-mark01"></span>
+    </div>
+  </div>
+  <div class="tag-tip-content" [ngClass]="placement + (isShow ? ' show':'')">
+    <ng-content select="[renderTo=content]"></ng-content>
+  </div>
+</div>

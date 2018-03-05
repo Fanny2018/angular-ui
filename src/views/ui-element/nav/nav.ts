@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 export class NavComponent {
     type = 1;
     openState = [true, false, false, false, false, false];
+    isShowOpen: boolean = false;
 
     changeOpenState(index: number) {
         for (let i = 0; i < this.openState.length; i++) {

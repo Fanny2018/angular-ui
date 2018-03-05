@@ -9,9 +9,7 @@ const cssTest = require('./css-test');
 const isProduction = process.env.NODE_ENV === 'production';
 const appPath = globalConfig.appPath;
 
-
 const publicPaths = [path.resolve(appPath, 'assets'), path.resolve(__dirname, '../node_modules')];
-
 
 module.exports = {
     entry: {
@@ -20,12 +18,13 @@ module.exports = {
         app: path.resolve(appPath, 'main.ts')
     },
     resolve: {
-        extensions: ['.js', '.ts']
+        extensions: ['.ts', '.js']
     },
     module: {
         rules: [{
             test: /\.ts$/,
             enforce: 'pre',
+            include: [appPath],
             use: [{
                 loader: 'tslint-loader',
                 options: {
@@ -36,8 +35,9 @@ module.exports = {
                 }
             }]
         }, {
-            test: /\.ts$/,
-            use: ['awesome-typescript-loader', 'angular2-template-loader', './config/ng-hot-replacement-loader']
+            test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
+            use: isProduction ? ['@ngtools/webpack'] : ['ng-router-loader', 'awesome-typescript-loader', 'angular2-template-loader', './config/ng-hot-replacement-loader']
+            //use: isProduction ? ['ng-router-loader', 'awesome-typescript-loader', 'angular2-template-loader'] : ['ng-router-loader', 'awesome-typescript-loader', 'angular2-template-loader', './config/ng-hot-replacement-loader']
         }, {
             test: /\.html$/,
             use: [{
@@ -69,7 +69,7 @@ module.exports = {
         }, {
             test: cssTest(cssConfig.language),
             include: publicPaths,
-            use: isProduction ?  ExtractTextPlugin.extract({
+            use: isProduction ? ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: ['css-loader', {
                     loader: 'postcss-loader',
@@ -78,24 +78,26 @@ module.exports = {
                             return [require('autoprefixer')];
                         }
                     }
-                }, `${cssConfig.language ? cssConfig.language + '-loader?sourceMap' : ''}`]
-            }) : ['style-loader', 'css-loader', {
+                }].concat(`${cssConfig.language ? cssConfig.language + '-loader' : ''}`)
+            }) : ['style-loader', 'css-loader?sourceMap', {
                 loader: 'postcss-loader',
                 options: {
                     plugins() {
                         return [require('autoprefixer')];
-                    }
+                    },
+                    sourceMap: true
                 }
             }].concat(`${cssConfig.language ? cssConfig.language + '-loader?sourceMap' : ''}`)
         }, {
             test: cssTest(cssConfig.language),
             exclude: publicPaths,
-            use: ['to-string-loader', 'css-loader', {
+            use: ['to-string-loader', 'css-loader?sourceMap', {
                 loader: 'postcss-loader',
                 options: {
                     plugins() {
                         return [require('autoprefixer')];
-                    }
+                    },
+                    sourceMap: true
                 }
             }, `${cssConfig.language ? cssConfig.language + '-loader?sourceMap' : ''}`]
         }]

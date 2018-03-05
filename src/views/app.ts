@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['app.scss']
 })
 export class AppComponent {
-    openState = [true, false, false, false, false, false];
+    openState: Array<any> = [true, false, false, false, false, false];
     menuState: boolean = true;
+    isShowOpen: boolean = false;
 
     changeOpenState(index: number) {
         for (let i = 0; i < this.openState.length; i++) {

@@ -1,0 +1,10 @@
+<div class="file-upload">
+  <div class="file-upload-view">
+    <ng-content></ng-content>
+  </div>
+  <input class="file-upload-file" name="file" type="file" [accept]="accept" (change)="onSelected()">
+</div>
+<div class="text-center upload-loading" *ngIf="isFileLoading">
+  <!--<img src="../../../../assets/images/circleloading.gif" alt="">-->
+  <p>导入中，请稍后!</p>
+</div>

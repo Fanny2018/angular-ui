@@ -1,0 +1,69 @@
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 2px 6px;
+    font-size: $font-size-base-xs;
+    font-weight: normal;
+    color: #fff;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: $color-primary;
+    border-radius: $badge-border-radius;
+    position: relative;
+    top: -2px;
+    line-height: 1.25;
+
+    &:empty {
+        display: none;
+    }
+
+    .btn & {
+        position: relative;
+        top: -1px;
+    }
+
+    .btn-xs &,
+    .btn-group-xs > .btn & {
+        top: 0;
+        padding: 1px 5px;
+    }
+
+    .list-group-item.active > &,
+    .nav-pills > .active > a > & {
+        color: #fff;
+        background-color: $color-primary;
+    }
+
+    .list-group-item > & {
+        float: right;
+    }
+
+    .list-group-item > & + & {
+        margin-right: 5px;
+    }
+
+    .nav-pills > li > a > & {
+        margin-left: 3px;
+    }
+}
+
+a.badge {
+    &:hover,
+    &:focus {
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.badge-dot {
+    position: absolute;
+    top: 50%;
+    margin: -10px 6px 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    color: #fff;
+}

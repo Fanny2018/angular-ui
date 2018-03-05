@@ -1,0 +1,47 @@
+.tag-tip {
+    display: inline-block;
+    position: relative;
+    .tag-tip-content {
+        width: auto;
+        position: absolute;
+        z-index: 99999;
+        display: none;
+        &.show {
+            display: block;
+        }
+        &.top {
+            bottom: 100%;
+        }
+        &.center {
+            left: 50%;
+        }
+        &.bottom {
+            top: 100%;
+        }
+        &.left {
+            left: 0;
+        }
+        &.right {
+            right: 0;
+        }
+    }
+}
+
+.tag {
+    .cart {
+        position: absolute;
+        right: 6px;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-top: 18px solid #01b9d1;
+        border-left: 18px solid transparent;
+    }
+    .icon-mark01 {
+        position: absolute;
+        color: #fff;
+        right: 6px;
+        top: 0;
+        font-size: 12px;
+    }
+}

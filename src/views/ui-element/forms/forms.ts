@@ -6,8 +6,11 @@ import { ConfirmController, ConfirmConfig } from '../../../modules/ui-components
     styleUrls: ['../data-count.scss', './forms.scss']
 })
 export class FormsComponent {
-    data = {};
-    checked = true;
+    data: any = {
+        account:''
+    };
+    checked: boolean = true;
+    checkbox2: boolean = true;
     model: string = '';
     value: string = '1';
 

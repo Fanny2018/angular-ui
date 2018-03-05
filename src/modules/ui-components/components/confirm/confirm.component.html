@@ -1,0 +1,24 @@
+<div class="ui-confirm"
+     [@confirmContentAnimate]="animateState ? 'in' : 'out'" (@confirmContentAnimate.done)="done()"
+     [ngClass]="{'modal-lg': size === 'lg',
+     'modal-sm': size === 'sm',
+     'left':position==='left',
+     'right':position==='right',
+     'top':position==='top',
+     'bottom':position==='bottom',
+     'middle':position==='middle'}">
+  <h5 class="ui-confirm-title clearfix">
+    {{title || '系统消息'}}
+    <button (click)="publishAction(false)" type="button" class="pull-right close"><span class="icon-close2"></span>
+    </button>
+  </h5>
+  <div class="ui-confirm-body">
+    {{content}}
+    <ng-content></ng-content>
+    <div [innerHTML]="contentHtml" *ngIf="!content"></div>
+  </div>
+  <div class="ui-confirm-footer text-center">
+    <button (click)="publishAction(true)" type="button" class="btn btn-primary btn-sm">确定</button>
+    <button (click)="publishAction(false)" type="button" class="btn btn-sm btn-default">取消</button>
+  </div>
+</div>

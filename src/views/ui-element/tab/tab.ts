@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
     styleUrls: ['../data-count.scss']
 })
 export class TabComponent {
-    type = 1;
+    type: number = 1;
     openClose: boolean = true;
+    isShowOpen: boolean = true;
+    isOpen: boolean = false;
 
     changeType(type: number) {
         this.type = type;

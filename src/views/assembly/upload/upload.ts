@@ -21,6 +21,10 @@ export class UploadComponent {
         }
     }
 
+    onUploaded(item: any) {
+        console.log(item);
+    }
+
     onError(item: any) {
         this.fileErrorInfo = item.message;
     }
